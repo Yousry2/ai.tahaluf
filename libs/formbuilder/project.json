@@ -1,0 +1,36 @@
+{
+  "name": "formbuilder",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/formbuilder/src",
+  "prefix": "lib",
+  "projectType": "library",
+  "tags": ["scope:shared"],
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "project": "libs/formbuilder/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/formbuilder/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/formbuilder/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "outputs": ["{options.reportsDirectory}"],
+      "options": {
+        "reportsDirectory": "../../coverage/libs/formbuilder"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    }
+  }
+}
