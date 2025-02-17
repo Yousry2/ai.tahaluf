@@ -1,0 +1,12 @@
+
+  <ng-container #container></ng-container>
+  <button
+    [id]="options().id"
+    [style.border.color]="options().border.color"
+    [style.border.size]="options().border.size"
+  >
+    {{ options().caption }}
+  </button>
+
+
+<button (click)="selectField()">select field</button>

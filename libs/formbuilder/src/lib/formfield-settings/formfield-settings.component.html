@@ -1,0 +1,12 @@
+
+
+@let selectedFieldItem = selectedField();
+<div class="fkex-column">
+  @if(selectedFieldItem){ @for (item of Object.entries(selectedFieldItem); track
+  $index) {
+  <div class="flex-row">
+    <span>{{ item[0] }}</span>
+    <input [(ngModel)]="item[1]" />
+  </div>
+  } }
+</div>

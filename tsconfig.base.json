@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@tahaluf/common-util": ["libs/common-util/src/index.ts"],
       "@tahaluf/formbuilder": ["libs/formbuilder/src/index.ts"]
     }
   },
